@@ -1,0 +1,144 @@
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #F08CA5, #F2C318);
+  color: #333;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #E66562;
+  border-bottom: 3px solid black;
+}
+
+
+.logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.menu {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.partes h2 {
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.partes h2:hover {
+  color: #F2C318;
+  transform: scale(1.15);
+}
+
+
+.redes {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.redes img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+section {
+  background-color: white;
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #E66562;
+}
+
+
+ul {
+  padding: 15px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #F2C318;
+  color: black;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2F4F9E;
+  margin-top: 20px;
+  color: white;
+  border-top: 3px solid black;
+}
+
+
+.redes-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes-footer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes-footer img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
