@@ -1,21 +1,31 @@
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(90deg, #F08CA5, #F2C318);
   color: #333;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 
 header {
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 15px;
+  padding: 15px 30px;
   background-color: #E66562;
   border-bottom: 3px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 
@@ -24,102 +34,151 @@ header {
   height: 90px;
   border-radius: 50%;
   border: 2px solid black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .logo img:hover {
   transform: scale(1.15);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 
 .menu {
   display: flex;
-  gap: 50px;
-  position: absolute;
-  left: 550px;
-  margin-left: 20px;
+  gap: 40px;
+  margin-left: 420px;
 }
 
-.prefacio h2{
-  color: #F2C318;
-  padding-left: 30px;
-
-}
-
-.partes h2,.prefacio h2{
-  margin: 0;
-  cursor: pointer;
+.partes h2 {
   color: white;
-  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.partes h2:hover , .prefacio h2:hover{
+.partes h2:hover {
   color: #F2C318;
-  transform: scale(1.15);
-}
-
-
-.redes {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-.redes img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid black;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.redes img:hover {
-  transform: scale(1.15);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-3px) scale(1.1);
 }
 
 
 section {
   background-color: white;
   margin: 30px;
-  padding: 20px;
+  padding: 25px;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 12px;
+
+  animation: aparecer 0.7s ease;
 }
 
 
 h1 {
   font-family: 'Playfair Display', serif;
   color: #E66562;
+  margin-bottom: 15px;
 }
 
 
 ul {
-  padding: 15px;
+  padding-left: 20px;
 }
 
 li {
-  margin-bottom: 15px;
+  margin-bottom: 6px;
+}
+
+
+#album {
+  text-align: center;
+}
+
+#album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album-card {
+  position: relative;
+  width: 240px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+}
+
+
+.album-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.tracklist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  overflow-y: auto;
+  transform: translateY(-100%);
+  transition: 0.6s ease;
+}
+
+.album-card:hover .tracklist {
+  transform: translateY(0);
+}
+
+
+.tracklist h3 {
+  margin-bottom: 10px;
+}
+
+.tracklist p {
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: center;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 th {
-  background-color: #F2C318;
+  background-color: #2F4F9E;
   color: black;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+tr {
+  transition: 0.3s;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #2F4F9E; 
+  color: white;
+  transform: scale(1.02);
 }
 
 
@@ -127,22 +186,21 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #2F4F9E;
-  margin-top: 20px;
   color: white;
   border-top: 3px solid black;
 }
-
 
 .redes-footer {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
+
 .redes-footer img {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: 2px solid black;
   object-fit: cover;
@@ -150,6 +208,7 @@ footer {
 }
 
 .redes-footer img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
